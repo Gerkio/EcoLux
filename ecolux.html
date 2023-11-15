@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLux</title>
+  <link rel="shortcut icon" href="https://i.ibb.co/23PtPqL/Ecolux-ISOTIPO45-PX2-min.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #FFFFFF;
+    }
+
+    /* Barra de Navegación */
+    nav {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+    }
+
+    nav img {
+      max-height: 35px;
+      padding-right: 15%;
+      margin-left: 0px;
+    }
+
+    nav a {
+        padding: 3px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    /* Sección 1 - Cabecera */
+    .header {
+      background-image: url('https://i.ibb.co/xGVmdWH/1-min.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .register-button {
+      background-color: #FED437;
+      color: #000000;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    /* Sección 2 */
+    .section2 {
+      background-color: #FFFFFF;
+      color: #000000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Sección 3 */
+    .section3 {
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+
+    }
+
+    /* Sección 4 y 5 */
+    .section4, .section5 {
+      display: flex;
+      color: #000000;
+    }
+
+    .section4 div, .section5 div {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Sección 6 */
+    .section6 {
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .section6 .grid-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .section6 .grid-container div {
+      text-align: center;
+    }
+
+    /* Sección 7 */
+    .section7 {
+      background-image: url('https://i.ibb.co/XxsLHVY/7-min.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 50px;
+      height: 580px;
+    }
+
+    /* Sección 8 */
+    .section8 {
+      background-color: #15772A;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Sección 9 (Footer) */
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      background-color: #000000;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 20px;
+    }
+
+    .footer div {
+      width: 24%;
+      padding: 2%;
+    }
+
+    .footer div a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    /* Estilos generales */
+    h2, h3, h4 {
+      color: #FED437;
+      font-family: 'Montserrat', sans-serif;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    h2 {
+      font-size: 2em;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    h3, h4 {
+      font-size: 1.5em;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    p {
+      font-size: 1em;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    button.yellow {
+      background-color: #FED437;
+      color: #000000;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+
+    /* Formulario de Subscribe */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    form button {
+      background-color: #000000;
+      color: #FED437;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+
+
+    table {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+      border-collapse: collapse;
+      border:0px;
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    td {
+      width: 33.33%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    /* Estilo para las imágenes */
+    td img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0%;
+    }
+
+    /* Estilo para los botones */
+    table button {
+      background-color: #15772A;
+      color: #FFFFFF;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+    table h3{
+        margin-bottom: 0px;
+    }
+
+    table p{
+        margin-top: 0px;
+
+    }
+
+
+    /* Media Query para Pantallas Pequeñas (Móviles) */
+    @media only screen and (max-width: 768px) {
+    /* Barra de Navegación */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav img {
+        max-height: 50px;
+        padding-right: 0;
+        margin-left: 0;
+        margin: 5px;
+    }
+
+    nav a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* Sección 1 - Cabecera */
+    .header {
+        height: auto;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .register-button {
+        margin-top: 10px;
+    }
+
+    /* Sección 3 */
+    .section3 {
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .section3 h2 {
+        font-size: 1.5em; /* Reducir el tamaño del encabezado */
+    }
+
+    .section3 p {
+        font-size: 0.9em; /* Reducir el tamaño del párrafo */
+    }
+
+    /* Sección 4 y 5 */
+    .section4, .section5 {
+        flex-direction: column; /* Cambiar a disposición de columna para dispositivos móviles */
+    }
+
+    .section4 div, .section5 div {
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+        /* Sección 6 */
+    .section6 .grid-container {
+        flex-direction: column; /* Cambiar a disposición de columna para dispositivos móviles */
+    }
+
+    .section6 .grid-container div {
+        margin-bottom: 10px; /* Agregar margen inferior entre elementos */
+    }
+
+        /* Sección 7 */
+    .section7 {
+        padding: 20px; /* Agregar relleno para mejorar la legibilidad en dispositivos móviles */
+    }
+
+        /* Sección 8 */
+    .section8 {
+      background-color: #15772A;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+        /* ... Estilos originales ... */
+    }
+
+    .section8 h2 {
+    
+        font-size: 1.5em; /* Reducir el tamaño del encabezado */
+    }
+
+    .section8 p {
+        font-size: 0.9em; /* Reducir el tamaño del párrafo */
+    }
+
+    form input {
+        width: 100%; /* Hacer que el campo de entrada abarque todo el ancho disponible */
+    }
+
+        /* Sección 9 (Footer) */
+    .footer {
+        flex-direction: column; /* Cambiar a disposición de columna para dispositivos móviles */
+    }
+
+    .footer div {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        margin-bottom: 20px; /* Agregar margen inferior entre elementos */
+    }
+
+        /* 4 ICONOS REDONDOS PARA RRSS */
+    .footer div i {
+        font-size: 24px; /* Tamaño de fuente para iconos */
+        height: 10px; /* Agregar margen a la derecha de los iconos */
+    }
+    
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Barra de Navegación -->
+  <nav>
+    <img src="https://i.ibb.co/vBZJQPz/Ecolux-LETTERING-min.png" alt="Logo de la marca">
+    <a href="#">HOME</a>
+    <a href="#">PRODUCTOS</a>
+    <a href="#">PROMOCIONES</a>
+    <a href="#">NOSOTROS</a>
+    <a href="#">CONTACTO</a>
+  </nav>
+
+  <!-- Sección 1 - Cabecera -->
+  <div class="header">
+    <h1>EcoLux</h1>
+    <p>¡Descubre la Iluminación del Futuro con ECOLUX! Líderes en tecnologías ecoamigables de iluminación, iluminamos el mundo con innovación sostenible. Conecta con nosotros para una experiencia luminosa consciente del medio ambiente.</p>
+    <button class="register-button">SUSCRÍBETE</button>
+  </div>
+
+  <!-- Sección 2 -->
+  <div class="section2">
+    <h2 style="color: #000000;">ILUMINACIÓN ECO-AMIGABLE</h2>
+    <p>Desde brillantes skylines en América hasta exuberantes paisajes en Asia y las vastas tierras de Australia,<br>ECOLUX ilumina cada rincón del mundo con tecnologías de iluminación sostenible. Con presencia global, estamos comprometidos<br>a llevar la luz del futuro a comunidades de todos los continentes.</p>
+    <!-- GRID HORIZONTAL DE TRES IMAGENES -->
+          <!-- Tabla -->
+  <table>
+    <!-- Fila 1: Imágenes -->
+
+    <tr>
+      <td colspan="3">
+        <img src="https://i.ibb.co/1fBZy5W/2-min.jpg" alt="Imagen 1">
+      </td>
+      <td colspan="3">
+        <img src="https://i.ibb.co/9Hxrbm6/3-min.jpg" alt="Imagen 1">
+      </td>
+      <td colspan="3">
+        <img src="https://i.ibb.co/KrLRZqy/4-min.jpg" alt="Imagen 1">
+      </td>
+    </tr>
+
+    <!-- Fila 2: H3 -->
+ 
+    <tr>
+      <td colspan="3">
+        <h3 style="color: #FED437;">AMÉRICA</h3>
+      </td>
+      <td colspan="3">
+        <h3 style="color: #FED437;">ASIA</h3>
+      </td>
+      <td colspan="3">
+        <h3 style="color: #FED437;">AUSTRALIA</h3>
+      </td>
+    </tr>
+
+    <!-- Fila 3: Párrafos -->
+    <tr>
+      <td colspan="3">
+        <p>ECOLUX transforma el panorama luminoso de América, potenciando proyectos de iluminación privada con tecnologías ecoamigables. Desde residencias exclusivas hasta espacios corporativos, llevamos la innovación sostenible a cada rincón. Ilumina tu espacio con ECOLUX, donde la elegancia se encuentra con la responsabilidad ambiental.</p>
+      </td>
+      <td colspan="3">
+        <p>En Asia, ECOLUX impulsa la vanguardia de la innovación tecnológica en iluminación. Colaboramos en proyectos que fusionan tradición y modernidad, iluminando el futuro con eficiencia y estilo. Desde rascacielos emblemáticos hasta espacios de innovación, estamos transformando Asia con la luz sostenible de ECOLUX.</p>
+      </td>
+      <td colspan="3">
+        <p>En Australia, ECOLUX lidera la revolución luminosa, potenciando proyectos integrales en iluminación privada, pública y, especialmente, en el sector de la salud. Desde hogares hasta hospitales, nuestro compromiso es iluminar vidas con tecnologías sostenibles. Descubre cómo transformamos cada espacio con luz, bienestar y eficiencia.</p>
+      </td>
+    </tr>
+  </table>
+  </div>
+  </div>
+
+  <!-- Sección 3 -->
+  <div class="section3">
+    <h2>RECONOCIMIENTOS</h2>
+    <p>ECOLUX, orgullo de reconocimientos nacionales e internacionales, destaca en eventos globales por liderar la implementación de tecnologías de iluminación sostenible. Nuestra visión vanguardista ha sido aplaudida en múltiples plataformas, destacando la innovación que aportamos al cuidado del medio ambiente. Estos premios son testimonio de nuestro compromiso con un futuro luminoso y sostenible. Únete a la revolución de la iluminación con ECOLUX.</p>
+    <!-- GRID HORIZONTAL DE TRES CUADROS -->
+      <!-- Tabla -->
+  <table>
+    <!-- Fila 1: Imágenes -->
+
+    <tr>
+      <td colspan="3">
+        <img src="https://i.ibb.co/NxfjXJN/Pngtree-gold-medal-set-badge-vector-9445686-min.png" alt="Imagen 1" style="max-width: 60%;">
+      </td>
+      <td colspan="3">
+        <img src="https://i.ibb.co/NxfjXJN/Pngtree-gold-medal-set-badge-vector-9445686-min.png" alt="Imagen 1" style="max-width: 60%;">
+      </td>
+      <td colspan="3">
+        <img src="https://i.ibb.co/NxfjXJN/Pngtree-gold-medal-set-badge-vector-9445686-min.png" alt="Imagen 1" style="max-width: 60%;">
+      </td>
+    </tr>
+
+    <!-- Fila 2: H3 -->
+ 
+    <tr>
+      <td colspan="3">
+        <h3>ÍNDICE DOW JONES</h3>
+      </td>
+      <td colspan="3">
+        <h3>SAP</h3>
+      </td>
+      <td colspan="3">
+        <h3>WE ARE WATER<BR>DE ROCA</h3>
+      </td>
+    </tr>
+
+    <!-- Fila 3: Párrafos -->
+    <tr>
+      <td colspan="3">
+        <p>ECOLUX ha sido elogiado en Australia por liderar la implementación de iluminación amigable con el medio ambiente en entornos hospitalarios. Nuestro compromiso con tecnologías sostenibles ha sido reconocido, aportando luz brillante y saludable a los espacios de atención médica.</p>
+      </td>
+      <td colspan="3">
+        <p>ECOLUX ha sido elogiado en América Latina por su destacada contribución al campo mediante la introducción de nuevas tecnologías de iluminación. Nuestro compromiso con la innovación sostenible ha sido reconocido, iluminando y transformando comunidades rurales con eficiencia y respeto por el medio ambiente.</p>
+      </td>
+      <td colspan="3">
+        <p>ECOLUX es aclamado en Asia por liderar la implementación de nuevas tecnologías e impulsar innovaciones en iluminación menos contaminante. Nuestro compromiso con la sostenibilidad ha sido reconocido, contribuyendo al desarrollo de soluciones luminosas vanguardistas que respetan el medio ambiente.</p>
+      </td>
+    </tr>
+
+    <!-- Fila 4: Botones LEER MÁS -->
+    <tr>
+      <td colspan="3" style="text-align: center;">
+        <button>LEER MÁS</button>
+      </td>
+      <td colspan="3" style="text-align: center;">
+        <button>LEER MÁS</button>
+      </td>
+      <td colspan="3" style="text-align: center;">
+        <button>LEER MÁS</button>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <!-- Sección 4 -->
+  <div class="section4">
+    <div style="background-image: url('https://i.ibb.co/1fBZy5W/2-min.jpg'); background-size: cover;" >
+      <!-- IMAGEN -->
+    </div>
+    <div>
+      <h2 style="color: #000000;">ILUMINACIÓN DEL FUTURO</h2>
+      <p>ECOLUX emerge como la iluminación del futuro al integrar tecnología de vanguardia con un compromiso inquebrantable con la sostenibilidad. Nuestra innovadora gama de productos no solo ilumina, sino que redefine los estándares de eficiencia energética y respeto al medio ambiente. Desde proyectos privados hasta iniciativas públicas, nuestra presencia global impulsa un cambio hacia la iluminación consciente. Con reconocimientos a nivel mundial, somos pioneros en implementar soluciones que marcan el camino hacia un mañana más brillante y sostenible.</p>
+      <p>Lo que nos distingue es nuestra incansable búsqueda de la excelencia en iluminación. No solo proporcionamos luz, sino que diseñamos experiencias luminosas que mejoran la calidad de vida. Colaboramos con comunidades, empresas y sectores especializados, liderando la revolución de la iluminación sostenible. En cada rincón del mundo, desde Asia hasta América, ECOLUX no solo ilumina el presente, sino que sienta las bases para un futuro donde la luz y la sostenibilidad convergen armoniosamente. Descubre con nosotros la iluminación del futuro, hoy.</p>
+      <button class="yellow">LEER MÁS</button>
+    </div>
+  </div>
+
+  <!-- Sección 5 -->
+  <div class="section5">
+    <div>
+      <h2 style="color: #000000;">MAYOR AHORRO</h2>
+      <p>ECOLUX se posiciona como la elección definitiva para el ahorro inteligente al ofrecer soluciones de iluminación que fusionan la eficiencia con la vanguardia tecnológica. Nuestra gama de productos utiliza tecnologías de bajo consumo y LED de última generación, brindando un rendimiento luminoso excepcional con un consumo energético mínimo. Además, destacamos por nuestra durabilidad, reduciendo los costos de mantenimiento y reemplazo a largo plazo. Con ECOLUX, no solo obtienes iluminación de alta calidad, sino también un ahorro sustancial en costos operativos y una huella ambiental reducida.</p>
+      <p>En un mundo centrado en la eficiencia, ECOLUX se erige como la mejor opción para el ahorro económico y ambiental. Nuestras soluciones no solo cumplen con estándares rigurosos de eficiencia energética, sino que también ofrecen un retorno de inversión rápido gracias a la reducción significativa de los gastos asociados con la iluminación tradicional. Desde el sector residencial hasta grandes proyectos comerciales, elegir ECOLUX es elegir el equilibrio perfecto entre rendimiento óptimo y responsabilidad financiera y ambiental. Con nosotros, el ahorro es más que una elección, es una garantía.</p>
+      <button class="yellow">LEER MÁS</button>
+    </div>
+    <div style="background-image: url('https://i.ibb.co/9Hxrbm6/3-min.jpg'); background-size: cover;" >
+      <!-- IMAGEN -->
+    </div>
+  </div>
+
+  <!-- Sección 6 -->
+  <div class="section6">
+    <h2>PROYECTOS</h2>
+    <p>ECOLUX lidera la revolución energética con más de 1240 proyectos de energía solar y más de 2000 proyectos de iluminación inteligente, abarcando más de 1000 comunidades en todo el mundo. Nuestro compromiso con la sostenibilidad va más allá de la iluminación convencional; hemos llevado la innovación a la acción, transformando comunidades con soluciones que fusionan la eficiencia energética y la iluminación inteligente. Cada proyecto representa un paso hacia un futuro más brillante y sostenible, donde la energía solar y la iluminación inteligente se unen para mejorar la calidad de vida y preservar nuestro planeta. Con más de una década de experiencia, continuamos iluminando el mundo con tecnologías que marcan la pauta para un mañana más luminoso y eficiente.</p>
+    <div class="grid-container">
+      <div>
+        <h3><b>1240+</b></h3>
+        <p>Proyectos de<br>energía solar</p>
+      </div>
+      <div>
+        <h3><b>2000+</b></h3>
+        <p>Proyectos de<br>iluminación inteligente</p>
+      </div>
+      <div>
+        <h3><b>1000+</b></h3>
+        <p>Comunidades con<br>iluminación <b>LED</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección 7 -->
+  <div class="section7">
+    <!-- IMAGEN DE FONDO -->
+    <p>"La verdadera innovación es como una luz brillante en la mente,<br>iluminando el camino hacia soluciones que no solo son eficientes,<br>sino también respetuosas con nuestro hogar, la Tierra."</p>
+    <h4>PABLO VARELA</h4>
+  </div>
+
+  <!-- Sección 8 -->
+  <div class="section8">
+    <h2 style="color: #FFFFFF;">SUSCRÍBETE</h2>
+    <p>¡Únete a la revolución de la iluminación sostenible!<br>Suscríbete a nuestro newsletter para descubrir las últimas innovaciones, ofertas exclusivas y noticias inspiradoras.<br>Sé parte del cambio hacia un futuro más brillante y consciente. Suscríbete ahora en nuestro sitio web.</p>
+    <form>
+      <input type="email" placeholder="YOUR EMAIL">
+      <button class="yellow">SUSCRÍBETE</button>
+    </form>
+  </div>
+
+  <!-- Sección 9 (Footer) -->
+  <div class="footer">
+    <!-- SECCION A -->
+    <div>
+      <h3>ECOLUX</h3>
+      <p>¡Descubre la esencia de ECOLUX explorando nuestra página! Sumérgete en la innovación sostenible, iluminación consciente y proyectos transformadores. ¡Haz clic y ilumina tu camino hacia un futuro más brillante!</p>
+      <!-- 4 ICONOS REDONDOS PARA RRSS -->
+    </div>
+
+    <!-- SECCION B -->
+    <div>
+      <h3>ABOUT</h3>
+      <p><a href="#">History</a></p>
+      <p><a href="#">our team</a></p>
+      <p><a href="#">brand guidelines</a></p>
+      <p><a href="#">Termns & Conditions</a></p>
+      <p><a href="#">Privacy Policy</a></p>
+    </div>
+
+    <!-- SECCION C -->
+    <div>
+      <h3>SERVICES</h3>
+      <p><a href="#">How to Order</a></p>
+      <p><a href="#">Our product</a></p>
+      <p><a href="#">Order status</a></p>
+      <p><a href="#">Promo</a></p>
+      <p><a href="#">Payment method</a></p>
+    </div>
+
+    <!-- SECCION D -->
+    <div>
+      <h3>OTHER</a></h3>
+      <p><a href="#">Contact Us</a></p>
+      <p><a href="#">Help</a></p>
+      <p><a href="#">Privacy</a></p>
+    </div>
+  </div>
+</body>
+</html>
